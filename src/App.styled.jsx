@@ -13,13 +13,13 @@ background-color:#000000;
 
 
 export const ImageContainer=styled.div`
-    height:200px;
+    /* height:200px; */
     width:100%;
 `;
 
 export const Image=styled.img`
 padding:10px;
-height:150px;
+height:190px;
 width:100%;`;
 export  const DetailsContainer=styled.div`
     width:600px;
