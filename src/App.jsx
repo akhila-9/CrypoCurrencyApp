@@ -9,8 +9,11 @@ import {
   DetailsContainer,
   EntireContainer,
   HeaderContainer,
+  Heading,
   Image,
   ImageContainer,
+  ImageDiv,
+  NamesContainer,
   Symbol,
 } from "./App.styled";
 
@@ -32,23 +35,27 @@ function App() {
     <>
       <EntireContainer>
         <ImageContainer>
+          <Heading>
+            CryptoCurrency Tracker
+          </Heading>
           <Image src="https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png" />
         </ImageContainer>
         {data.length > 0 && (
           <DetailsContainer>
             <HeaderContainer>
               <div>CoinType</div>
-              <Currency>
+              {/* <Currency> */}
                 <div>USD</div>
                 <div>EURO</div>
-              </Currency>
+              {/* </Currency> */}
             </HeaderContainer>
             <BodyContainer>
+              <NamesContainer>
               <Cards1>
                 {data.map((result) => {
                   return (
                     <>
-                      <div><Symbol src={result.currency_logo}/></div>
+                      <ImageDiv><Symbol src={result.currency_logo}/></ImageDiv>
                      
                     </>
                   );
@@ -66,6 +73,7 @@ function App() {
                 })}
               
               </Cards1>
+              </NamesContainer>
                <Cards1>
                 {data.map((result) => {
                   return (
